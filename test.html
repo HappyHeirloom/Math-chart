@@ -225,7 +225,170 @@
         </head>
 
         <body>
-            <div id="chartdiv" style="width:100%; height:500px;"></div>
+            <div id="chartdiv" style="width: 100%; height: 500px; overflow: hidden; text-align: left;">
+              <div class="amcharts-main-div" style="position: relative;">
+                  <div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 1904px; height: 500px; padding: 0px; cursor: default;">
+                      <svg version="1.1" style="position: absolute; width: 1904px; height: 500px; top: 0px; left: 0px;">
+                        <desc>Math Chart</desc>
+                          <defs>
+                            <filter x="-50%" y="-50%" width="200%" height="200%" id="blur"><feGaussianBlur in="SourceGraphic" stdDeviation="50"></feGaussianBlur></filter>
+
+                            <filter id="shadow" width="150%" height="150%"><feOffset result="offOut" in="SourceAlpha" dx="2" dy="2"></feOffset>
+                              <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"></feGaussianBlur>
+                              <feColorMatrix result="blurOut" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .2 0"></feColorMatrix>
+                              <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+                            </filter>
+                          </defs>
+                          <g>
+                            <path cs="100,100" d="M0.5,0.5 L1903.5,0.5 L1903.5,499.5 L0.5,499.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-bg"></path>
+                            <path cs="100,100" d="M0.5,0.5 L1903.5,0.5 L1903.5,474.5 L0.5,474.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" class="amcharts-plot-area" transform="translate(0,0)"></path>
+                          </g>
+
+                          <g><g class="amcharts-category-axis" transform="translate(0,0)">
+                            <g><path cs="100,100" d="M0.5,474.5 L0.5,474.5 L0.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M173.5,474.5 L173.5,474.5 L173.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M346.5,474.5 L346.5,474.5 L346.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M519.5,474.5 L519.5,474.5 L519.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M692.5,474.5 L692.5,474.5 L692.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M865.5,474.5 L865.5,474.5 L865.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M1038.5,474.5 L1038.5,474.5 L1038.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M1211.5,474.5 L1211.5,474.5 L1211.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M1384.5,474.5 L1384.5,474.5 L1384.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M1557.5,474.5 L1557.5,474.5 L1557.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M1730.5,474.5 L1730.5,474.5 L1730.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M1903.5,474.5 L1903.5,474.5 L1903.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g></g><g class="amcharts-value-axis value-axis-valueAxisAuto0_1478676511880" transform="translate(0,0)" visibility="visible">
+                            <g><path cs="100,100" d="M0.5,474.5 L0.5,474.5 L1903.5,474.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,438.5 L0.5,438.5 L1903.5,438.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,401.5 L0.5,401.5 L1903.5,401.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,365.5 L0.5,365.5 L1903.5,365.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,328.5 L0.5,328.5 L1903.5,328.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,292.5 L0.5,292.5 L1903.5,292.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,255.5 L0.5,255.5 L1903.5,255.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,219.5 L0.5,219.5 L1903.5,219.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,182.5 L0.5,182.5 L1903.5,182.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,146.5 L0.5,146.5 L1903.5,146.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,109.5 L0.5,109.5 L1903.5,109.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,73.5 L0.5,73.5 L1903.5,73.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,36.5 L0.5,36.5 L1903.5,36.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g>
+                            <g><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L1903.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.07" stroke="#000000" class="amcharts-axis-grid"></path></g></g>
+                          </g>
+
+                          <g transform="translate(0,0)" clip-path="url(#AmChartsEl-3)"><g visibility="hidden"><g transform="translate(1471,0)" visibility="hidden"><rect x="0.5" y="0.5" width="173" height="474" rx="0" ry="0" stroke-width="1" fill="#FFFFFF" stroke="#FFFFFF" fill-opacity="1" stroke-opacity="1" class="amcharts-cursor-fill" transform="translate(-88,0)"></rect></g></g></g>
+
+                          <g></g>
+                          <g></g>
+                          <g></g>
+
+                            <g>
+                              <g transform="translate(0,0)" class="amcharts-graph-line amcharts-graph-g1">
+                                <g></g> <g clip-path="url(#AmChartsEl-10)">
+                                    <path cs="100,100" d="M-86.5,166.21769 L87.5,274.32615 L260.5,296.75 L433.5,247.34462 L605.5,252.44923 L779.5,125.74538 L952.5,237.68231 L1125.5,272.13846 L1298.5,335.03462 L1471.5,265.75769 L1644.5,262.47615 L1817.5,149.99231 L1990.5,186.45385 M0,0 L0,0" fill="none" stroke-width="1" stroke-opacity="0" stroke="#FF6600" stroke-linejoin="round" class="amcharts-graph-stroke"></path>
+                                    <path cs="100,100" d="M-86.5,166.21769 L87.5,274.32615 L260.5,296.75 L433.5,247.34462 L605.5,252.44923 L779.5,125.74538 L952.5,237.68231 L1125.5,272.13846 L1298.5,335.03462 L1471.5,265.75769 L1644.5,262.47615 L1817.5,149.99231 L1990.5,186.45385 L1990.5,474.5 L1817.5,474.5 L1644.5,474.5 L1471.5,474.5 L1298.5,474.5 L1125.5,474.5 L952.5,474.5 L779.5,474.5 L605.5,474.5 L433.5,474.5 L260.5,474.5 L87.5,474.5 L-86.5,474.5 Z" fill="url(#AmChartsEl-9)" stroke="#000" fill-opacity="0.8" stroke-width="1" stroke-opacity="0" class="amcharts-graph-fill"></path>
+                                    <linearGradient id="AmChartsEl-9" x1="0%" x2="0%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#0066e3"></stop>
+                                    <stop offset="100%" stop-color="#802ea9"></stop>
+                                    </linearGradient>
+                                    </g>
+                                    <clipPath id="AmChartsEl-10"><rect x="0" y="0" width="1903" height="474" rx="0" ry="0" stroke-width="0"></rect></clipPath>
+                                <g></g>
+
+                              </g>
+
+                              <g transform="translate(0,0)" class="amcharts-graph-line amcharts-graph-g2">
+                                <g></g>
+
+                                <g clip-path="url(#AmChartsEl-11)"><path cs="100,100" d="M-86.5,31.85692 L87.5,150.35692 L260.5,175.69769 L433.5,129.20923 L605.5,136.31923 L779.5,101.49846 L952.5,124.46923 L1125.5,270.31538 L1298.5,292.73923 L1471.5,225.83231 L1644.5,225.83231 L1817.5,134.49615 L1990.5,134.49615 M0,0 L0,0" fill="none" stroke-width="1" stroke-opacity="0" stroke="#5bb5ea" stroke-linejoin="round" class="amcharts-graph-stroke"></path>
+                                  <path cs="100,100" d="M-86.5,31.85692 L87.5,150.35692 L260.5,175.69769 L433.5,129.20923 L605.5,136.31923 L779.5,101.49846 L952.5,124.46923 L1125.5,270.31538 L1298.5,292.73923 L1471.5,225.83231 L1644.5,225.83231 L1817.5,134.49615 L1990.5,134.49615 L1990.5,186.45385 L1817.5,149.99231 L1644.5,262.47615 L1471.5,265.75769 L1298.5,335.03462 L1125.5,272.13846 L952.5,237.68231 L779.5,125.74538 L605.5,252.44923 L433.5,247.34462 L260.5,296.75 L87.5,274.32615 L-86.5,166.21769 Z" fill="#5bb5ea" stroke="#000" fill-opacity="0.8" stroke-width="1" stroke-opacity="0" class="amcharts-graph-fill"></path>
+                                </g>
+                                <clipPath id="AmChartsEl-11"><rect x="0" y="0" width="1903" height="474" rx="0" ry="0" stroke-width="0"></rect></clipPath>
+
+                                <g></g>
+
+                              </g>
+
+                              <g transform="translate(0,0)" class="amcharts-graph-line amcharts-graph-g3">
+                                <g></g>
+                                <g clip-path="url(#AmChartsEl-12)"><path cs="100,100" d="M87.5,308.6 L260.5,352.35385 L433.5,304.95385 L605.5,290.36923 L779.5,151.81538 L952.5,325.00769 L1125.5,283.07692 L1298.5,356 L1471.5,332.3 L1644.5,346.88462 L1817.5,206.50769 M0,0 L0,0" fill="none" stroke-width="1" stroke-dasharray="2" stroke-opacity="0.5" stroke="#FFFFFF" stroke-linejoin="round" class="amcharts-graph-stroke"></path></g>
+                                <clipPath id="AmChartsEl-12"><rect x="0" y="0" width="1903" height="474" rx="0" ry="0" stroke-width="0"></rect></clipPath>
+                                <g></g>
+                              </g>
+                          </g>
+
+                          <g></g>
+
+                          <g><path cs="100,100" d="M0.5,474.5 L1903.5,474.5 L1903.5,474.5" fill="none" stroke-width="1" stroke-opacity="0.14" stroke="#000000" transform="translate(0,0)" class="amcharts-axis-zero-grid-valueAxisAuto0_1478676511880 amcharts-axis-zero-grid"></path>
+                            <g class="amcharts-category-axis">
+                              <path cs="100,100" d="M0.5,0.5 L1903.5,0.5" fill="none" stroke-width="1" stroke-opacity="1" stroke="#DADADA" transform="translate(0,474)" class="amcharts-axis-line"></path>
+                            </g>
+
+                            <g class="amcharts-value-axis value-axis-valueAxisAuto0_1478676511880">
+                              <path cs="100,100" d="M0.5,0.5 L0.5,474.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000" transform="translate(0,0)" class="amcharts-axis-line" visibility="visible"></path>
+                            </g>
+                          </g>
+
+                          <g>
+                            <g transform="translate(0,0)" clip-path="url(#AmChartsEl-4)" style="pointer-events: none;">
+                              <path cs="100,100" d="M0.5,0.5 L1903.5,0.5 L1903.5,0.5" fill="none" stroke-width="1" stroke="#FFFFFF" class="amcharts-cursor-line amcharts-cursor-line-horizontal" visibility="hidden" transform="translate(0,84)"></path>
+                            </g>
+                              <clipPath id="AmChartsEl-4"><rect x="0" y="0" width="1903" height="474" rx="0" ry="0" stroke-width="0"></rect></clipPath>
+                          </g>
+
+                          <g></g>
+
+                          <g>
+                            <g transform="translate(0,0)" class="amcharts-graph-line amcharts-graph-g1"></g>
+                          <g transform="translate(0,0)" class="amcharts-graph-line amcharts-graph-g2"></g>
+                          <g transform="translate(0,0)" class="amcharts-graph-line amcharts-graph-g3">
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(87,308) scale(1)" aria-label="Bicycles 2001 910" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(260,352) scale(1)" aria-label="Bicycles 2002 670" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(433,304) scale(1)" aria-label="Bicycles 2003 930" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(605,290) scale(1)" aria-label="Bicycles 2004 1,010" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(779,151) scale(1)" aria-label="Bicycles 2005 1,770" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(952,325) scale(1)" aria-label="Bicycles 2006 820" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(1125,283) scale(1)" aria-label="Bicycles 2007 1,050" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(1298,356) scale(1)" aria-label="Bicycles 2008 650" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(1471,332) scale(1)" aria-label="Bicycles 2009 780" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(1644,346) scale(1)" aria-label="Bicycles 2010 700" class="amcharts-graph-bullet"></circle>
+                          <circle r="7.5" cx="0" cy="0" fill="#5d7ad9" stroke="#FFFFFF" fill-opacity="1" stroke-width="3" stroke-opacity="1" transform="translate(1817,206) scale(1)" aria-label="Bicycles 2011 1,470" class="amcharts-graph-bullet"></circle></g></g>
+                          <g> <g></g> </g>
+
+                          <g>
+                            <g class="amcharts-category-axis" transform="translate(0,0)" visibility="visible"><text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(86.69380134478637,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2001</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(259.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2002</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(432.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2003</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(605.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2004</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(778.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2005</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(951.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2006</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(1124.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2007</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(1297.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2008</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(1470.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2009</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(1643.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2010</tspan></text>
+                            <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="middle" transform="translate(1816.6938013447864,488.5)" class="amcharts-axis-label"><tspan y="8" x="0">2011</tspan></text>
+                            </g>
+
+                            <g class="amcharts-value-axis value-axis-valueAxisAuto0_1478676511880" transform="translate(0,0)" visibility="visible"><text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="start" transform="translate(9,465)" class="amcharts-axis-label"><tspan y="8" x="0">0</tspan></text>
+                              <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="start" transform="translate(9,392)" class="amcharts-axis-label"><tspan y="8" x="0">400</tspan></text>
+                              <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="start" transform="translate(9,319)" class="amcharts-axis-label"><tspan y="8" x="0">800</tspan></text>
+                              <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="start" transform="translate(9,246)" class="amcharts-axis-label"><tspan y="8" x="0">1,200</tspan></text>
+                              <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="start" transform="translate(9,173)" class="amcharts-axis-label"><tspan y="8" x="0">1,600</tspan></text>
+                              <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="start" transform="translate(9,100)" class="amcharts-axis-label"><tspan y="8" x="0">2,000</tspan></text>
+                              <text y="8" fill="#000000" font-family="Lato" font-size="15px" opacity="1" text-anchor="start" transform="translate(9,27)" class="amcharts-axis-label"><tspan y="8" x="0">2,400</tspan></text>
+                            </g>
+                          </g>
+
+                          <g></g>
+
+                          <g transform="translate(0,0)"></g>
+
+                          <g></g>
+
+                          <g></g>
+                          <clipPath id="AmChartsEl-3"><rect x="-1" y="-1" width="1905" height="476" rx="0" ry="0" stroke-width="0"></rect></clipPath>
+                        </svg>
+                        <a href="http://www.amcharts.com/javascript-charts/" title="JavaScript charts" style="position: absolute; text-decoration: none; color: rgb(0, 0, 0); font-family: Lato; font-size: 11px; opacity: 0.7; display: block; left: 5px; top: 5px;"></a>
+                      </div>
+                    </div>
+                  </div>
         </body>
 
 </html>
