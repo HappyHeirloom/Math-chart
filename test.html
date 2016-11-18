@@ -212,13 +212,13 @@
             chart.addListener("dataUpdated", zoomChart);
 
             function zoomChart() {
-              chart.zoomToIndexes(1, chartData.length - 2);
+              chart.zoomToIndexes(0, chartData.length - 0);
             }
             </script>
         </head>
 
         <body>
-          <input type="text" id="newpointX" placeholder="Tid"/><input type="text" id="newpointY" placeholder="gærceller"/><button id="newpoint">Nyt punkt</button><button id="clearchart">Clear chart</button><br />            <div id="chartdiv" style="width: 100%; height: 500px; overflow: hidden; text-align: left;">
+          <input type="text" id="newpointX" placeholder="Tid"/><input type="text" id="newpointY" placeholder="gærceller"/><button id="newpoint">Nyt punkt</button><button id="newchart1">New Chart</button><button id="newchart2">New Chart #2</button><button id="loadchart">Load old chart</button><br />            <div id="chartdiv" style="width: 100%; height: 500px; overflow: hidden; text-align: left;">
               <div class="amcharts-main-div" style="position: relative;">
                   <div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 1904px; height: 500px; padding: 0px; cursor: default;">
                       <svg version="1.1" style="position: absolute; width: 1904px; height: 500px; top: 0px; left: 0px;">
@@ -388,8 +388,17 @@
                   <script>
                   $(document).ready(function() {
                     var newData = [];
-                    $("#clearchart").click(function(){
+                    $("#newchart1").click(function(){
                       chart.dataProvider = newData;
+                      chart.validateData();
+                    });
+                    var newData2 = [];
+                    $("#newchart2").click(function(){
+                      chart.dataProvider = newData2;
+                      chart.validateData();
+                    });
+                    $("#loadchart").click(function(){
+                      chart.dataProvider = chartData;
                       chart.validateData();
                     });
                     $("#newpoint").click(function(){
