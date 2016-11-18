@@ -8,6 +8,10 @@
         <script src="./amcharts/serial.js" type="text/javascript"></script>
         <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
         <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+        <script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
         <style type="text/css">
 
         @import url(http://fonts.googleapis.com/css?family=Lato:200,300);
@@ -26,15 +30,16 @@
         </style>
 
         <script>
+        /*
 
+        */
             var chartData = [{
               "minutes": 0,
               "gærceller": 15,
-              "gærceller2": 16
+              "gærceller2": 90
             }, {
               "minutes": 20,
-              "gærceller": 16,
-              "gærceller2":17
+              "gærceller": 16
             }, {
               "minutes": 40,
               "gærceller": 18
@@ -78,7 +83,6 @@
               "minutes": 320,
               "gærceller": 125
             }];
-
             var chart = AmCharts.makeChart("chartdiv", {
               "type": "serial",
               "fontFamily": "Lato",
@@ -174,7 +178,7 @@
               "bulletBorderAlpha": 1,
               "bulletAlpha": 1,
               "bulletSize": 15,
-              "stackable": true,
+              "stackable": false,
               "bulletColor": "#5d7ad9",
               "bulletBorderColor": "#FFFFFF",
               "bulletBorderThickness": 3,
@@ -215,7 +219,7 @@
         </head>
 
         <body>
-            <div id="chartdiv" style="width: 100%; height: 500px; overflow: hidden; text-align: left;">
+          <input type="text" id="newpointX" placeholder="Tid"/><input type="text" id="newpointY" placeholder="gærceller"/><button id="newpoint">Nyt punkt</button><button id="clearchart">Clear chart</button><br />            <div id="chartdiv" style="width: 100%; height: 500px; overflow: hidden; text-align: left;">
               <div class="amcharts-main-div" style="position: relative;">
                   <div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 1904px; height: 500px; padding: 0px; cursor: default;">
                       <svg version="1.1" style="position: absolute; width: 1904px; height: 500px; top: 0px; left: 0px;">
@@ -382,6 +386,26 @@
                       </div>
                     </div>
                   </div>
+                  <script>
+                  $(document).ready(function() {
+                    var newData = [];
+                    $("#clearchart").click(function(){
+                      chart.dataProvider = newData;
+                      chart.validateData();
+                    });
+                    $("#newpoint").click(function(){
+                      var x = $("#newpointX").val();
+                      var y = $("#newpointY").val();
+                      console.log("click"+x+y);
+                      var object = {
+                        "minutes": x,
+                        "gærceller": y
+                      }
+                      newData.push(object);
+                      chart.validateData();
+                    });
+                  });
+                  </script>
         </body>
 
 </html>
