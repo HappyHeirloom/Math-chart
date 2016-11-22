@@ -33,55 +33,62 @@
         /*
 
         */
+
+
+
             var chartData = [{
-              "minutes": 0,
-              "gærceller": 15
-            }, {
-              "minutes": 20,
-              "gærceller": 16
-            }, {
-              "minutes": 40,
-              "gærceller": 18
-            }, {
-              "minutes": 60,
-              "gærceller": 19
-            }, {
-              "minutes": 80,
-              "gærceller": 22
-            }, {
-              "minutes": 100,
-              "gærceller": 24
-            }, {
-              "minutes": 140,
-              "gærceller": 31
-            }, {
-              "minutes": 160,
-              "gærceller": 42
-            }, {
-              "minutes": 180,
-              "gærceller": 49
-            }, {
-              "minutes": 200,
-              "gærceller": 67
-            }, {
-              "minutes": 220,
-              "gærceller": 78
-            }, {
-              "minutes": 240,
-              "gærceller": 90
-            }, {
-              "minutes": 240,
-              "gærceller": 105
-             }, {
-              "minutes": 280,
-              "gærceller": 109
-            }, {
-              "minutes": 300,
-              "gærceller": 122
-            }, {
-              "minutes": 320,
-              "gærceller": 125
-            }];
+                "minutes": 0,
+                "gærceller": 15
+              }, {
+                "minutes": 20,
+                "gærceller": 16
+              }, {
+                "minutes": 40,
+                "gærceller": 18
+              }, {
+                "minutes": 60,
+                "gærceller": 19
+              }, {
+                "minutes": 80,
+                "gærceller": 22
+              }, {
+                "minutes": 100,
+                "gærceller": 24
+              }, {
+                "minutes": 140,
+                "gærceller": 31
+              }, {
+                "minutes": 160,
+                "gærceller": 42
+              }, {
+                "minutes": 180,
+                "gærceller": 49
+              }, {
+                "minutes": 200,
+                "gærceller": 67
+              }, {
+                "minutes": 220,
+                "gærceller": 78
+              }, {
+                "minutes": 240,
+                "gærceller": 90
+              }, {
+                "minutes": 240,
+                "gærceller": 105
+               }, {
+                "minutes": 280,
+                "gærceller": 109
+              }, {
+                "minutes": 300,
+                "gærceller": 122
+              }, {
+                "minutes": 320,
+                "gærceller": 125
+              }];
+
+/*
+
+*/
             var chart = AmCharts.makeChart("chartdiv", {
               "type": "serial",
               "fontFamily": "Lato",
@@ -218,7 +225,14 @@
         </head>
 
         <body>
-          <input type="text" id="newpointX" placeholder="Tid"/><input type="text" id="newpointY" placeholder="gærceller"/><button id="newpoint">Nyt punkt</button><button id="newchart1">New Chart</button><button id="newchart2">New Chart #2</button><button id="loadchart">Load old chart</button><br />            <div id="chartdiv" style="width: 100%; height: 500px; overflow: hidden; text-align: left;">
+          <input type="text" id="newpointX" placeholder="Tid"/>
+          <input type="text" id="newpointY" placeholder="gærceller"/>
+          <button id="newpoint">Nyt punkt</button>
+          <button id="newchart1">New Chart</button>
+          <button id="newchart2">New Chart #2</button>
+          <button id="loadchart" style="float:right">Load old chart</button>
+          <button id="pointarray" style="float:right">Tendenslinje</button><br />
+          <div id="chartdiv" style="width: 100%; height: 500px; overflow: hidden; text-align: left;">
               <div class="amcharts-main-div" style="position: relative;">
                   <div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 1904px; height: 500px; padding: 0px; cursor: default;">
                       <svg version="1.1" style="position: absolute; width: 1904px; height: 500px; top: 0px; left: 0px;">
@@ -395,6 +409,22 @@
                     var newData2 = [];
                     $("#newchart2").click(function(){
                       chart.dataProvider = newData2;
+                      chart.validateData();
+                    });
+                    var pointarray = [];
+                    $("pointarray").click(function(){
+                      alert("hej");
+                      chart.dataProvider = pointarray;
+                      var x = 0;
+                      for (var i = 0; i < 1000; i++){
+                        x = x + 1/10;
+                        var y = 42 * Math.pow(1.010218,x);
+                        var object = {
+                          "minutes":x,
+                          "gærceller":y
+                        }
+                        pointarray.push(object);
+                      }
                       chart.validateData();
                     });
                     $("#loadchart").click(function(){
