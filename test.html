@@ -163,8 +163,8 @@
                 "valueField": "gærceller",
                 "lineAlpha": 1,
                 "lineColor": "#FF0074",
-                "bullet": "round",
-                "dashLength": 2,
+                "bullet": "hidden",
+                "dashLength": 0,
                 "bulletBorderAlpha": 1,
                 "bulletAlpha": 1,
                 "bulletSize": 15,
@@ -412,13 +412,14 @@
                       chart.validateData();
                     });
                     var pointarray = [];
-                    $("pointarray").click(function(){
-                      alert("hej");
+                    console.log("nigger");
+                    $("#pointarray").click(function(){
+
                       chart.dataProvider = pointarray;
                       var x = 0;
-                      for (var i = 0; i < 1000; i++){
+                      for (var i = 0; i < 5000; i++){
                         x = x + 1/10;
-                        var y = 42 * Math.pow(1.010218,x);
+                        var y = 24 * Math.pow(1.010218,x);
                         var object = {
                           "minutes":x,
                           "gærceller":y
